@@ -1,0 +1,36 @@
+
+body{
+    width: 100%;
+    margin: 0 auto;
+}
+.nav{
+    width: 60%;
+    margin: 0 auto;
+}
+.nav-menu{
+    margin: 1em;
+}
+.jumbotron{
+    background: url("/img/img_1.png") no-repeat;
+    height: auto;
+    color: white;
+    background-size: cover;
+ }
+.jumbotron h1{
+    font-size: 70px;
+    margin: 0;
+    padding: 0 0 .3em 0;
+}
+.jumbotron p{
+    font-size: 20px;
+}
+.jumbotron div{
+    width: 60%;
+    margin: 0 auto;
+    padding: 6.5em 0;
+}
+
+.prefixed-width{
+    width: 60%;
+    margin: 0 auto;
+}

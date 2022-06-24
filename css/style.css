@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&display=swap');
+
+
+:root{
+    --primary-color : #b50000;
+    --gray: #5a5856;
+}
+html{
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+
+body{
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+a{
+    color: var(--primary-color);
+}
+
+li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav{
+    /*width: 60%;*/
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav a{
+    text-decoration: none;
+    color: unset;
+    padding: 0;
+    margin: 0;
+}
+.nav a:hover{
+    color: var(--primary-color);
+}
+
+
+
+.nav-menu{
+    /*margin: 1em;*/
+    display: flex;
+    flex-direction: row;
+}
+.nav-menu a{
+    margin: 1em;
+}
+.nav-menu p {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.nav-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-logo p{
+    margin: 0;
+    padding: 0;
+}
+.nav-logo p:nth-child(2){
+    font-family: 'Open Sans', sans-serif !important;
+    color: var(--gray);
+}
+.nav-logo p:nth-child(1){
+    font-size: 22px;
+    color: var(--primary-color);
+}
+.current-page{
+    color: var(--primary-color)!important;
+}
+.btn-L-primary{
+    background-color: var(--primary-color);
+    color: white;
+    width: 216px;
+    padding: 19px 0;
+    border: unset;
+    cursor: pointer;
+    margin-top: 2em;
+    border-radius: 2px;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
