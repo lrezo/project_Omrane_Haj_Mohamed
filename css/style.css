@@ -28,7 +28,9 @@ body{
     margin: 0 auto;
 
 }
-
+hr{
+    border-color: #7a7a7a12;
+}
 a{
     color: var(--primary-color);
 }
@@ -103,6 +105,19 @@ li{
     margin-top: 2em;
     border-radius: 2px;
     font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+.btn-primary{
+    background-color: var(--primary-color);
+    color: white;
+    width: 104px;
+    padding: 4px 0;
+    border: unset;
+    cursor: pointer;
+    margin-top: .2em;
+    border-radius: 2px;
+    font-size: 16px;
     font-family: 'Playfair Display', serif;
     font-weight: normal;
 }

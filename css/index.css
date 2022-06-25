@@ -96,6 +96,97 @@ section hr{
     border-radius: 2px;
 }
 
+.card{
+    display: flex;
+    gap: 1em;
+    width: calc(100% / 3);
+}
+
+.card-item{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.card-item h3{
+    margin-bottom: .5em;
+    font-size: 28px;
+}
+.card-description{
+    border-left: 4px solid lightgray;
+    padding-left: 1.5em;
+    border-radius: 3px;
+}
+.card-description h4{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif !important;
+    color: var(--gray);
+    font-style: italic;
+}
+.part-two img{
+    height: 153px;
+    border-radius: 2px;
+}
+.part-two > div{gap: 1em;
+    display: flex;
+    flex-direction: row;
+
+}
+.part-three > div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1em;
+}
+.part-three h3{
+    color: var(--primary-color);
+}
+.part-three .card div{
+    width: calc(100% /5);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.part-three p{
+    border-left: 4px solid lightgray;
+    padding-left: 1.5em;
+    border-radius: 3px;
+    font-family: 'Open Sans', sans-serif !important;
+    color: var(--gray);
+}
+
+.part-four > div{
+    margin-top:3em;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+.part-four img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+.part-four .card-item{
+    width: 40%;
+}
+.part-four .card-description{
+    width: 60%;
+    border-radius: unset;
+    border-left: unset;
+    padding-left: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.part-four .card-description p{
+    border-left: 4px solid lightgray;
+    padding-left: 1.5em;
+    border-radius: 3px;
+    font-family: 'Open Sans', sans-serif !important;
+    color: var(--gray);
+}
+
+
 
 
 
