@@ -11,7 +11,7 @@ body{
     margin: 1em;
 }
 .jumbotron{
-    background: url("/img/img_1.png") no-repeat;
+    background: url("/img/background.png") no-repeat;
     height: auto;
     color: white;
     background-size: cover;
