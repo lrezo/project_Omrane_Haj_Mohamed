@@ -6,6 +6,7 @@
 :root{
     --primary-color : #b50000;
     --gray: #5a5856;
+    --slider-secondary-color:#ffffff4d;
 }
 html{
     font-family: 'Playfair Display', serif;

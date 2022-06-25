@@ -24,7 +24,7 @@ body{
 .jumbotron p{
     font-size: 20px;
 }
-.jumbotron div{
+.jumbotron-description{
     width: 60%;
     margin: 0 auto;
     padding: 6.5em 0;
@@ -33,4 +33,19 @@ body{
 .prefixed-width{
     width: 60%;
     margin: 0 auto;
+}
+.slider {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+.slider span{
+    width: 100%;
+    border: 1px solid;
+    margin: 2px 1px;
+    color: var(--slider-secondary-color);
+}
+.slider span:nth-child(3){
+    color: var(--primary-color);
 }
