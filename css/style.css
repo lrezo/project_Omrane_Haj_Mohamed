@@ -106,3 +106,11 @@ li{
     font-family: 'Playfair Display', serif;
     font-weight: normal;
 }
+
+.mb-1{
+    margin-bottom: 1em;
+}
+
+.mb-3{
+    margin-bottom: 3rem!important;
+}
