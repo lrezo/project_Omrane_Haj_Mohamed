@@ -186,6 +186,24 @@ section hr{
     color: var(--gray);
 }
 
+.part-five > div{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 100%;
+}
+.part-five h2{
+    margin-bottom: 3em;
+}
+.part-five object{
+    width: calc(100%/6);
+    padding:0 1em;
+    fill: gray;
+}
+.part-five object > svg{
+    fill:gray;
+}
+
 
 
 
