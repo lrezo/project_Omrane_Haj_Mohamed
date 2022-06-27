@@ -228,3 +228,10 @@ footer .current-page{
 input:focus-visible, textarea:focus-visible{
     outline: 2px var(--primary-color) solid;
 }
+
+.br-s{
+    margin: 5px 0;
+}
+.br{
+    margin: 10px 0;
+}
