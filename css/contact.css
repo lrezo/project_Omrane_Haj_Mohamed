@@ -28,6 +28,7 @@
 .right-menu h1{
     font-size: 1.17em;
     color: black;
+
 }
 .right-menu input{
     border:1px solid var(--light-gray);
