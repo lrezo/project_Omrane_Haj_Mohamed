@@ -226,6 +226,5 @@ footer .current-page{
     font-size: 36px;
 }
 input:focus-visible, textarea:focus-visible{
-    outline-color: var(--primary-color);
-    outline-style: solid;
+    outline: 2px var(--primary-color) solid;
 }
