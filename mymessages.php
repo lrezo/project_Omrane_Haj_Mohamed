@@ -6,6 +6,7 @@ const DB_USER = 'omran';
 const DB_PASS = '00122244377Pentagon';
 const DB_NAME = 'contactmeomran';
 // Verbinding maken met de databank
+$counter = 0;
 try {
     $db = new PDO('mysql:host=' . DB_HOST .';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -29,6 +30,7 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>My Messages</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/messages.css">
     <link rel="icon" type="image/x-icon" href="./img/ico/law-lawyer-company-judge-512.webp">
 </head>
 <body>
@@ -51,34 +53,35 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </header>
 <main>
 
-    <section class="flex flex-wrap flex-column justify-content-center gap-1">
-        <h1 class="cth">Your messages : </h1>
+    <section class="messages">
+        <h1>Your messages : </h1>
         <?php if (sizeof($items) > 0) { ?>
             <?php foreach ($items as $item) { ?>
-                <div class="card-cv-board flex flex-column flex-wrap messages col-10 margin-0-auto">
-                    <h3>You have received a message :</h3>
+
+                <div class="message-details">
+                    <h2><?php echo 'Message : '.$counter+=1 ?></h2>
                     <div class="flex flex-wrap gap-1">
                         <div><p>Name :</p></div>
-                        <div><p><?php echo htmlspecialchars(strip_tags($item['sender'], '<p><a>'), ENT_QUOTES);; ?></p></div>
+                        <div><p><?php echo htmlspecialchars(strip_tags($item['name'], '<p><a>'), ENT_QUOTES);; ?></p></div>
                     </div>
                     <div class="flex flex-wrap gap-1">
                         <div><p>Email :  </p></div>
                         <div><p><?php echo htmlspecialchars(strip_tags($item['email'], '<p><a>'), ENT_QUOTES);; ?></p></div>
                     </div>
                     <div class="flex flex-wrap gap-1">
+                        <div><p>Subject : </p></div>
+                        <div><p><?php echo htmlspecialchars(strip_tags($item['subject'], '<p><a>'), ENT_QUOTES);; ?> </p></div>
+                    </div>
+                    <div class="flex flex-wrap gap-1">
                         <div><p>Message : </p></div>
                         <div><p><?php echo htmlspecialchars(strip_tags($item['message'], '<p><a>'), ENT_QUOTES);; ?> </p></div>
                     </div>
                     <div class="flex flex-wrap gap-1">
-                        <div><p>He found you by :</p></div>
-                        <div><p><?php echo htmlspecialchars(strip_tags($item['found_you_on'], '<p><a>'), ENT_QUOTES); ?></p></div>
-                    </div>
-                    <div class="flex flex-wrap gap-1">
                         <div><p>Date of the message:</p></div>
-                        <div> <p>(<?php try {
-                                    echo (new Datetime($item['added_on']))->format('d-m-Y H:i:s');
+                        <div> <p><?php try {
+                                    echo (new Datetime($item['added_on']))->format('d-m-Y - H:i:s');
                                 } catch (Exception $e) {
-                                } ?>)</p></div>
+                                } ?></p></div>
                     </div>
                 </div>
             <?php } ?>
