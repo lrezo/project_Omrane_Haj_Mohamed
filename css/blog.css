@@ -22,11 +22,15 @@
     padding:0 0 0 1em;
     width: 88%;
 }
+.right-menu h1{
+    font-size: 1.17em;
+    color: black;
+}
 .search-bar{
     display: flex;
     flex-direction: row;
 }
-.article-title h3{
+.article-title h3, h1{
     font-size: 36px;
     color: var(--primary-color);
 

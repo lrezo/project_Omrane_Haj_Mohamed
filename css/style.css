@@ -11,6 +11,7 @@
     --light-gray : #E9E9E9;
     --color-footer : #9f9c98;
     --border-color-footer: #381e1f;
+    --footer-a-tag-color: #ff6d6d;
 }
 html{
     font-family: 'Playfair Display', serif;
@@ -177,7 +178,7 @@ footer a{
     margin-bottom: 0;
 }
 .footer a:hover{
-    color: var(--primary-color);
+    color: var(--footer-a-tag-color);
 }
 .footer svg{
     width: 20px;
@@ -207,4 +208,7 @@ footer a{
     text-align: center;
     font-family: 'Open Sans', sans-serif !important;
     color: var(--color-footer);
+}
+footer .current-page{
+    color: var(--footer-a-tag-color)!important;
 }
