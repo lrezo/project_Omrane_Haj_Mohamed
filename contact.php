@@ -1,4 +1,74 @@
+<?php
+// Show all errors (for educational purposes)
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
 
+const DB_HOST = 'localhost';
+const DB_USER = 'root';
+const DB_PASS = 'K-ny7N4rGpkd#fXy';
+const DB_NAME = 'mydb';
+// Verbinding maken met de databank
+try {
+    $db = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+echo 'Verbindingsfout: ' . $e->getMessage();
+exit;
+}
+
+$name = isset($_POST['name']) ? (string)$_POST['name'] : '';
+$message = isset($_POST['message']) ? (string)$_POST['message'] : '';
+$email = isset($_POST['email']) ? (string)$_POST['email'] : '';
+$subject = isset($_POST['subject']) ? (string)$_POST['subject'] : '';
+$msgName = '';
+$msgEmail = '';
+$msgMessage = '';
+$msg_found_me='';
+$msgSubject = '';
+
+// form is sent: perform formchecking!
+if (isset($_POST['btnSubmit'])) {
+
+$allOk = true;
+
+// name not empty
+if (trim($name) === '') {
+$msgName = 'Please enter a name';
+$allOk = false;
+}
+
+if (trim($message) === '') {
+$msgMessage = 'Please enter a message';
+$allOk = false;
+}
+if (trim($email) === '') {
+$msgEmail = 'Please enter an email';
+$allOk = false;
+}
+
+
+
+// end of form check. If $allOk still is true, then the form was sent in correctly
+if ($allOk) {
+// build & execute prepared statement
+$stmt = $db->prepare('INSERT INTO messages (sender, email, message,found_you_on, added_on) VALUES (?, ?, ?,?,?)');
+$stmt->execute(array($name,$email,$subject, $message, (new DateTime())->format('Y-m-d H:i:s')));
+
+// the query succeeded, redirect to this very same page
+if ($db->lastInsertId() != 0) {
+header('Location: formchecking_thanks.php?name=' . urlencode($name));
+exit();
+} // the query failed
+else {
+echo 'Databankfout.';
+exit;
+}
+
+}
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +93,7 @@
             <a href="#"><p>Case Studies</p></a>
             <a href="#"><p>Careers</p></a>
             <a href="./blog.html"><p>Blog</p></a>
-            <a class="current-page" href="./contact.html"><p>Contact</p></a>
+            <a class="current-page" href="contact.php"><p>Contact</p></a>
         </div>
     </nav>
 </header>
@@ -31,7 +101,49 @@
 <section class="contact-us-main">
     <div class="contact-us">
         <h1>Contact</h1>
-        <form action="" ></form>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus ex, bibendum nec ligula nec,
+            ornare facilisis massa. Etiam mattis orci a tortor laoreet, volutpat varius augue iaculis. Integer posuere
+            ultricies ultrices. Proin ac mauris eu tortor imperdiet vehicula. Morbi porttitor fringilla metus et gravida.</p>
+
+        <p>Ut sit amet mi erat. Mauris nunc tortor, aliquet at molestie in, varius sit amet libero. Morbi semper ipsum libero,
+            ut maximus dui porta id. Pellentesque in est et lectus elementum varius. Ut egestas sapien id ipsum molestie pellentesque.
+            Phasellus a magna orci. Vivamus eu urna vel magna cursus euismod vitae vulputate metus. Donec pellentesque ullamcorper
+            vestibulum.</p>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <div class ="name-and-email">
+                <div class="name">
+                    <label class="text-center" for="name">
+                        <input placeholder="Your Name" type="text" id="name" name="name" value="<?php echo $name; ?>" class="input-text"/></label>
+                    <span class=" message error"><?php echo $msgName; ?></span>
+                </div>
+
+                <div class="email">
+                    <label class="text-center" for="email">
+                        <input placeholder="Your Email" type="email" id="email" name="email" value="<?php echo $email; ?>" class="input-text"/></label>
+                    <span class=" message error"><?php echo $msgEmail; ?></span>
+                </div>
+            </div>
+
+            <div class="subject">
+                <label class="text-center" for="subject">
+                    <input placeholder="Subject" type="text" id="subject" name="subject" value="<?php echo $subject; ?>" class="input-text"/></label>
+                <span class=" message error"><?php echo $msgSubject; ?></span>
+            </div>
+
+            <div class="message">
+                <label class="text-center" for="message">
+                    <textarea placeholder="Your Message" name="message" id="message" rows="5" cols="40"><?php echo $message; ?></textarea></label>
+                <span class="message error"><?php echo $msgMessage; ?></span>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div>
+                    <button class="cta-1 mt-2" type="submit" id="btnSubmit" name="btnSubmit"value="Send me">
+                        <span>Send me</span>
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
     <div class="right-menu">
         <div class="search-bar">
@@ -66,7 +178,7 @@
                 <a href="./blog.html" class="current-page">Blog</a>
                 <a href="#">Careers</a>
                 <a href="#">Case Studies</a>
-                <a href="./contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
                 <a href="./index.html">Front page</a>
             </div>
 
@@ -111,11 +223,11 @@
                 <a href="#">Case Studies</a>
                 <a href="#">Careers</a>
                 <a href="./blog.html">Blog</a>
-                <a href="./contact.html" class="current-page">Contact</a>
+                <a href="contact.php" class="current-page">Contact</a>
             </div>
         </div>
         <div class="recent">
-            <h2>Recent</h2>
+            <h2>Recent Posts</h2>
             <div class="info">
                 <a href="./blog.html#banking-financial">Banking and Financial</a>
                 <a href="./blog.html#family-law">Family Law</a>
