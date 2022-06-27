@@ -76,8 +76,15 @@ form{
 
 }
 
-.name, .email{
+.message, .name, .email,.subject{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
     width: 100%;
+}
+.message,.name, .email,.subject span{
+    color: var(--primary-color);
+    font-family: 'Open Sans', sans-serif !important;
 }
 .contact-us-main input, textarea{
     padding: 1em;

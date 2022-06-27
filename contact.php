@@ -4,9 +4,9 @@ ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 1);
 
 const DB_HOST = 'localhost';
-const DB_USER = 'root';
-const DB_PASS = 'K-ny7N4rGpkd#fXy';
-const DB_NAME = 'mydb';
+const DB_USER = 'omran';
+const DB_PASS = '00122244377Pentagon';
+const DB_NAME = 'contactmeomran';
 // Verbinding maken met de databank
 try {
     $db = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
