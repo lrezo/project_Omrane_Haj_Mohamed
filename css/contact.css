@@ -108,3 +108,31 @@ textarea{
     padding: .5em 1em;
     border-radius: 4px;
 }
+.contact-us-title{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 98%;
+}
+.contact-us-title a{
+    padding: 1em;
+    border: 2px solid;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif !important;
+}
+.contact-us-title a:hover{
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--gray);
+    border-radius: 3px;
+    text-decoration: none;
+}
+.contact-us-title a:active{
+    background-color: transparent;
+    color: var(--gray);
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+    text-decoration: none;
+}

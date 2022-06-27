@@ -104,7 +104,11 @@ exit;
 <main>
 <section class="contact-us-main">
     <div class="contact-us">
-        <h1>Contact</h1>
+        <div class="contact-us-title">
+            <h1>Contact</h1>
+            <a href="./mymessages.php">My messages</a>
+        </div>
+
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus ex, bibendum nec ligula nec,
             ornare facilisis massa. Etiam mattis orci a tortor laoreet, volutpat varius augue iaculis. Integer posuere
             ultricies ultrices. Proin ac mauris eu tortor imperdiet vehicula. Morbi porttitor fringilla metus et gravida.</p>
