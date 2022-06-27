@@ -11,7 +11,7 @@ $age = isset($_GET['age']) ? $_GET['age'] : false;
     <title>Thanks For Contacting Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link style="width: 16px; height: 16px;" rel="icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/x-icon" href="./img/ico/law-lawyer-company-judge-512.webp">
 </head>
 <body>
 <header>
