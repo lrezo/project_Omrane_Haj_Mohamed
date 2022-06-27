@@ -225,3 +225,7 @@ footer .current-page{
     margin: 3em auto;
     font-size: 36px;
 }
+input:focus-visible, textarea:focus-visible{
+    color: var(--primary-color);
+    outline-color: var(--primary-color);
+}
