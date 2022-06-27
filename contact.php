@@ -136,10 +136,10 @@ exit;
                 <span class="message error"><?php echo $msgMessage; ?></span>
             </div>
 
-            <div class="d-flex justify-content-center">
+            <div class="submit">
                 <div>
-                    <button class="cta-1 mt-2" type="submit" id="btnSubmit" name="btnSubmit"value="Send me">
-                        <span>Send me</span>
+                    <button class="btn-primary" type="submit" id="btnSubmit" name="btnSubmit"value="Send me">
+                        <span>Send Message</span>
                     </button>
                 </div>
             </div>

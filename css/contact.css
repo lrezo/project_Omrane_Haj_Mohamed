@@ -64,7 +64,7 @@
 form{
     margin-top: 2em;
     padding-left: 1em;
-    width: 100%;
+    width: 98%;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -73,7 +73,7 @@ form{
     display: flex;
     flex-direction: row;
     gap: 2em;
-    width: 98%;
+
 }
 
 .name, .email{
@@ -86,13 +86,18 @@ form{
     border:1px solid var(--light-gray);
     border-radius: 2px;
 }
-.subject{
-    width: 98%;
-}
-.message{
-    width: 98%;
-}
+
 textarea{
     max-width: 100%;
     resize: vertical;
+}
+
+.submit{
+    align-self: flex-end;
+}
+.submit .btn-primary{
+    width: 95%;
+    background-color: var(--contact-submit-btn-color);
+    padding: .5em 1em;
+    border-radius: 4px;
 }
