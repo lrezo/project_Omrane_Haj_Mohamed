@@ -339,11 +339,16 @@ section hr{
 .testimonials-description h3{
     font-size: 20px;
 }
+.testimonials-description{
+    width: 26%;
+}
 .testimonials-description p {
     font-family: 'Open Sans', sans-serif !important;
     color: var(--gray);
     font-size: 14px;
     font-style: italic;
+    width: 94%;
+    text-align: right;
 
 }
 
