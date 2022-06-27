@@ -213,3 +213,14 @@ footer a{
 footer .current-page{
     color: var(--footer-a-tag-color)!important;
 }
+
+.thanks-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    margin: 3em auto;
+    font-size: 36px;
+}

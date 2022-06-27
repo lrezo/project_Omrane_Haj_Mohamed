@@ -1009,106 +1009,581 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="292" parent="277" name="eseguita">
+    <table id="292" parent="274" name="beroepsprofielen">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="293" parent="277" name="messages">
+    <table id="293" parent="274" name="deuren">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="294" parent="274" name="docenten">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="295" parent="274" name="docenten_has_vakken">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="296" parent="274" name="informatiepunten">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="297" parent="274" name="keuzevakken">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="298" parent="274" name="lokalen">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="299" parent="274" name="personen">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="300" parent="274" name="studenten">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="301" parent="274" name="vakken">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="302" parent="274" name="vakken_has_lokalen">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="303" parent="274" name="verplichte_vakken">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="304" parent="274" name="volgtijdelijkheden">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="305" parent="277" name="eseguita">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <table id="306" parent="277" name="messages">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="294" parent="277" name="musicita">
+    <table id="307" parent="277" name="musicita">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <column id="295" parent="292" name="CF">
+    <column id="308" parent="292" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="309" parent="292" name="naam">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <key id="310" parent="292" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="311" parent="293" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="312" parent="293" name="x1">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="313" parent="293" name="y1">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="314" parent="293" name="x2">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="315" parent="293" name="y2">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <key id="316" parent="293" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="317" parent="294" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="318" parent="294" name="rol">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="319" parent="294" name="fk_docenten_personen">
+      <ColNames>id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>personen</RefTableName>
+    </foreign-key>
+    <index id="320" parent="294" name="fk_docenten_personen_idx">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="321" parent="294" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="322" parent="295" name="docent_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="323" parent="295" name="vak_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="324" parent="295" name="fk_docenten_has_vakken_docenten1">
+      <ColNames>docent_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>docenten</RefTableName>
+    </foreign-key>
+    <foreign-key id="325" parent="295" name="fk_docenten_has_vakken_vakken1">
+      <ColNames>vak_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>vakken</RefTableName>
+    </foreign-key>
+    <index id="326" parent="295" name="fk_docenten_has_vakken_docenten1_idx">
+      <ColNames>docent_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="327" parent="295" name="fk_docenten_has_vakken_vakken1_idx">
+      <ColNames>vak_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="328" parent="295" name="PRIMARY">
+      <ColNames>docent_id
+vak_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="329" parent="296" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="330" parent="296" name="lokaal_id">
+      <DataType>int|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="331" parent="296" name="persoon_id">
+      <DataType>int|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="332" parent="296" name="x">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="333" parent="296" name="y">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="334" parent="296" name="beschrijving">
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="335" parent="296" name="fk_informatiepanelen_lokalen1">
+      <ColNames>lokaal_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>lokalen</RefTableName>
+    </foreign-key>
+    <foreign-key id="336" parent="296" name="fk_informatiepanelen_personen1">
+      <ColNames>persoon_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>personen</RefTableName>
+    </foreign-key>
+    <index id="337" parent="296" name="fk_informatiepanelen_lokalen1_idx">
+      <ColNames>lokaal_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="338" parent="296" name="fk_informatiepanelen_personen1_idx">
+      <ColNames>persoon_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="339" parent="296" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="340" parent="297" name="student_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="341" parent="297" name="vak_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="342" parent="297" name="fk_studenten_has_vakken_studenten1">
+      <ColNames>student_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>studenten</RefTableName>
+    </foreign-key>
+    <foreign-key id="343" parent="297" name="fk_studenten_has_vakken_vakken1">
+      <ColNames>vak_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>vakken</RefTableName>
+    </foreign-key>
+    <index id="344" parent="297" name="fk_studenten_has_vakken_studenten1_idx">
+      <ColNames>student_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="345" parent="297" name="fk_studenten_has_vakken_vakken1_idx">
+      <ColNames>vak_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="346" parent="297" name="PRIMARY">
+      <ColNames>student_id
+vak_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="347" parent="298" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="348" parent="298" name="naam">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="349" parent="298" name="lokaalcode">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="350" parent="298" name="x">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="351" parent="298" name="y">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="352" parent="298" name="breedte">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="353" parent="298" name="lengte">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <key id="354" parent="298" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="355" parent="299" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="356" parent="299" name="familienaam">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="357" parent="299" name="voornaam">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <key id="358" parent="299" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="359" parent="300" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="360" parent="300" name="beroepsprofiel_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="361" parent="300" name="inschrijvingsjaar">
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="362" parent="300" name="fk_studenten_personen1">
+      <ColNames>id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>personen</RefTableName>
+    </foreign-key>
+    <foreign-key id="363" parent="300" name="fk_studenten_beroepsprofielen1">
+      <ColNames>beroepsprofiel_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>beroepsprofielen</RefTableName>
+    </foreign-key>
+    <index id="364" parent="300" name="fk_studenten_personen1_idx">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="365" parent="300" name="fk_studenten_beroepsprofielen1_idx">
+      <ColNames>beroepsprofiel_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="366" parent="300" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="367" parent="301" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="368" parent="301" name="naam">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="369" parent="301" name="aantal_studiepunten">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="370" parent="301" name="periode">
+      <DataType>set(&apos;SEM1&apos;, &apos;SEM2&apos;)|0e</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <key id="371" parent="301" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="372" parent="302" name="vak_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="373" parent="302" name="lokaal_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="374" parent="302" name="fk_vakken_has_lokalen_vakken1">
+      <ColNames>vak_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>vakken</RefTableName>
+    </foreign-key>
+    <foreign-key id="375" parent="302" name="fk_vakken_has_lokalen_lokalen1">
+      <ColNames>lokaal_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>lokalen</RefTableName>
+    </foreign-key>
+    <index id="376" parent="302" name="fk_vakken_has_lokalen_vakken1_idx">
+      <ColNames>vak_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="377" parent="302" name="fk_vakken_has_lokalen_lokalen1_idx">
+      <ColNames>lokaal_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="378" parent="302" name="PRIMARY">
+      <ColNames>vak_id
+lokaal_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="379" parent="303" name="vak_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="380" parent="303" name="beroepsprofiel_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="381" parent="303" name="fk_vakken_has_beroepsprofielen_vakken1">
+      <ColNames>vak_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>vakken</RefTableName>
+    </foreign-key>
+    <foreign-key id="382" parent="303" name="fk_vakken_has_beroepsprofielen_beroepsprofielen1">
+      <ColNames>beroepsprofiel_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>beroepsprofielen</RefTableName>
+    </foreign-key>
+    <index id="383" parent="303" name="fk_vakken_has_beroepsprofielen_vakken1_idx">
+      <ColNames>vak_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="384" parent="303" name="fk_vakken_has_beroepsprofielen_beroepsprofielen1_idx">
+      <ColNames>beroepsprofiel_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="385" parent="303" name="PRIMARY">
+      <ColNames>vak_id
+beroepsprofiel_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="386" parent="304" name="vak_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="387" parent="304" name="vervolgvak_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="388" parent="304" name="fk_vakken_has_vakken_vakken1">
+      <ColNames>vak_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>vakken</RefTableName>
+    </foreign-key>
+    <foreign-key id="389" parent="304" name="fk_vakken_has_vakken_vakken2">
+      <ColNames>vervolgvak_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>vakken</RefTableName>
+    </foreign-key>
+    <index id="390" parent="304" name="fk_vakken_has_vakken_vakken1_idx">
+      <ColNames>vak_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="391" parent="304" name="fk_vakken_has_vakken_vakken2_idx">
+      <ColNames>vervolgvak_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="392" parent="304" name="PRIMARY">
+      <ColNames>vak_id
+vervolgvak_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="393" parent="305" name="CF">
       <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="296" parent="292" name="titoloAutore">
+    <column id="394" parent="305" name="titoloAutore">
       <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="297" parent="292" name="chashet">
+    <column id="395" parent="305" name="chashet">
       <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
-    <foreign-key id="298" parent="292" name="fk_Eseguita_Musicita">
+    <foreign-key id="396" parent="305" name="fk_Eseguita_Musicita">
       <ColNames>titoloAutore</ColNames>
       <RefColNames>CF</RefColNames>
       <RefTableName>musicita</RefTableName>
     </foreign-key>
-    <index id="299" parent="292" name="idEseguita_UNIQUE">
+    <index id="397" parent="305" name="idEseguita_UNIQUE">
       <ColNames>CF</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="300" parent="292" name="fk_Eseguita_Musicita_idx">
+    <index id="398" parent="305" name="fk_Eseguita_Musicita_idx">
       <ColNames>titoloAutore</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="301" parent="292" name="PRIMARY">
+    <key id="399" parent="305" name="PRIMARY">
       <ColNames>CF
 titoloAutore</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <key id="302" parent="292" name="idEseguita_UNIQUE">
+    <key id="400" parent="305" name="idEseguita_UNIQUE">
       <ColNames>CF</ColNames>
       <UnderlyingIndexName>idEseguita_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="303" parent="293" name="id">
+    <column id="401" parent="306" name="id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="304" parent="293" name="sender">
+    <column id="402" parent="306" name="sender">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="305" parent="293" name="email">
+    <column id="403" parent="306" name="email">
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="306" parent="293" name="message">
+    <column id="404" parent="306" name="message">
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="307" parent="293" name="found_you_on">
+    <column id="405" parent="306" name="found_you_on">
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="308" parent="293" name="added_on">
+    <column id="406" parent="306" name="added_on">
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="309" parent="294" name="CF">
+    <key id="407" parent="306" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="408" parent="307" name="CF">
       <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="310" parent="294" name="nome">
+    <column id="409" parent="307" name="nome">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="311" parent="294" name="indirizzo">
+    <column id="410" parent="307" name="indirizzo">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="312" parent="294" name="numeroCellulare">
+    <column id="411" parent="307" name="numeroCellulare">
       <DataType>varchar(45)|0s</DataType>
       <Position>4</Position>
     </column>
-    <key id="313" parent="294" name="PRIMARY">
+    <key id="412" parent="307" name="PRIMARY">
       <ColNames>CF</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
