@@ -235,3 +235,9 @@ input:focus-visible, textarea:focus-visible{
 .br{
     margin: 10px 0;
 }
+.sticky{
+    position: sticky;
+    top: 1em;
+    height: 15%;
+    bottom: 1em;
+}
