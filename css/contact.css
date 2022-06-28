@@ -131,7 +131,7 @@ textarea{
 }
 .contact-us-title a:active{
     background-color: transparent;
-    color: var(--gray);
+    color: var(--gray)!important;
     border: 2px solid var(--primary-color);
     border-radius: 3px;
     text-decoration: none;
