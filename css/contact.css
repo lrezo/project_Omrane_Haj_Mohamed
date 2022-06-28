@@ -124,7 +124,7 @@ textarea{
 }
 .contact-us-title a:hover{
     background-color: var(--primary-color);
-    color: white;
+    color: white!important;
     border: 2px solid var(--gray);
     border-radius: 3px;
     text-decoration: none;
