@@ -151,6 +151,9 @@ header{
     font-family: 'Playfair Display', serif;
     font-weight: normal;
 }
+button{
+    outline: 2px var(--gray) solid;
+}
 footer{
     background-color: var(--footer-bg-color);
     color: white;
