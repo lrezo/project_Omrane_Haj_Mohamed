@@ -151,7 +151,7 @@ header{
     font-family: 'Playfair Display', serif;
     font-weight: normal;
 }
-button{
+button:focus-visible{
     outline: 2px var(--gray) solid;
 }
 footer{
