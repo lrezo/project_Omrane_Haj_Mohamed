@@ -136,3 +136,6 @@ textarea{
     border-radius: 3px;
     text-decoration: none;
 }
+.contact-us-title a:visited{
+    color: unset;
+}
