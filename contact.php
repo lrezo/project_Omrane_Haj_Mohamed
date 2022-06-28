@@ -249,7 +249,7 @@ exit;
     </div>
     <div class="credits">
         <hr>
-        <br>
+        <div class="br"></div>
         <p>Proudly powered by WordPress | Theme LawyeriaX by Themeisle</p>
     </div>
 </footer>

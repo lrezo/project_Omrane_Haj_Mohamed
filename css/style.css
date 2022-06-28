@@ -12,6 +12,7 @@
     --color-footer : #9f9c98;
     --border-color-footer: #381e1f;
     --footer-a-tag-color: #ff6d6d;
+    --footer-a-tag-color-visited: #7d7b78;
     --contact-submit-btn-color: #397ab3;
     --messages-page-hover-div-color:#c1c1c11c;
 }
@@ -28,6 +29,13 @@ html{
 }
 *:focus-visible{
     outline: 2px var(--primary-color) solid;
+}
+a:visited{
+    color: var(--gray);
+}
+
+a:hover{
+    color: var(--primary-color);
 }
 
 h1,h2,h3,h4{
@@ -185,6 +193,9 @@ footer a{
 }
 .footer a:hover{
     color: var(--footer-a-tag-color);
+}
+.footer a:visited{
+    color: var(--footer-a-tag-color-visited);
 }
 .footer svg{
     width: 20px;
