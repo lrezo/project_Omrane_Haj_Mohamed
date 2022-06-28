@@ -137,5 +137,5 @@ textarea{
     text-decoration: none;
 }
 .contact-us-title a:visited{
-    color: unset;
+    color: var(--primary-color);
 }
