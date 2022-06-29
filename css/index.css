@@ -17,11 +17,43 @@
     font-size: 20px;
 }
 .jumbotron-description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.jumbotron-description-middle{
+    display: flex;
+    flex-direction: column;
     width: 60%;
     margin: 0 auto;
     padding: 6.5em 0;
 }
-
+.left-arrow{
+    background-color: #7d7b788a;
+    width: 2%;
+    height: 37px;
+    margin-left: 1em;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+.left-arrow img,.right-arrow img{
+    width: 100%;
+    height: 53%;
+}
+.right-arrow{
+    background-color: #7d7b788a;
+    width: 2%;
+    height: 37px;
+    margin-right: 1em;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
 .prefixed-width{
     width: 60%;
     margin: 0 auto 6rem;
