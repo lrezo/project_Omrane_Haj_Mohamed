@@ -121,26 +121,30 @@ exit;
             <div class ="name-and-email">
                 <div class="name">
                     <label class="text-center" for="name">
-                        <input placeholder="Your Name" type="text" id="name" name="name" value="<?php echo $name; ?>" class="input-text"/></label>
+                        Your Name</label>
+                    <input placeholder="Type here" type="text" id="name" name="name" value="<?php echo $name; ?>" class="input-text"/>
                     <span class=" message error"><?php echo $msgName; ?></span>
                 </div>
 
                 <div class="email">
                     <label class="text-center" for="email">
-                        <input placeholder="Your Email" type="email" id="email" name="email" value="<?php echo $email; ?>" class="input-text"/></label>
+                        Your Email</label>
+                    <input placeholder="Type here" type="email" id="email" name="email" value="<?php echo $email; ?>" class="input-text"/>
                     <span class=" message error"><?php echo $msgEmail; ?></span>
                 </div>
             </div>
 
             <div class="subject">
                 <label class="text-center" for="subject">
-                    <input placeholder="Subject" type="text" id="subject" name="subject" value="<?php echo $subject; ?>" class="input-text"/></label>
+                    Subject</label>
+                <input placeholder="Type here" type="text" id="subject" name="subject" value="<?php echo $subject; ?>" class="input-text"/>
                 <span class=" message error"><?php echo $msgSubject; ?></span>
             </div>
 
             <div class="message">
                 <label class="text-center" for="message">
-                    <textarea placeholder="Your Message" name="message" id="message" rows="5" cols="40"><?php echo $message; ?></textarea></label>
+                    Your Message</label>
+                <textarea placeholder="Type here..." name="message" id="message" rows="5" cols="40"><?php echo $message; ?></textarea>
                 <span class="message error"><?php echo $msgMessage; ?></span>
             </div>
 

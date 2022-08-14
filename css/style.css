@@ -259,3 +259,20 @@ input:focus-visible, textarea:focus-visible{
     height: 15%;
     bottom: 1em;
 }
+@keyframes test {
+    0% {
+        top: -100px;
+        opacity: 0.7;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+.jumbotron-description-middle{
+    animation: test .6s  ease;
+    transition: .6s test ;
+    position: relative;
+    will-change: scroll-position;
+}
