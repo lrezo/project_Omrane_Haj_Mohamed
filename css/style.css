@@ -98,6 +98,7 @@ header{
 }
 .nav-menu a{
     margin: 1em;
+    height: 30px;
 }
 .nav-menu p {
     margin: 0;
@@ -122,8 +123,8 @@ header{
     font-size: 22px;
     color: var(--primary-color);
 }
-.current-page{
-    color: var(--primary-color)!important;
+.current-page {
+    color: var(--primary-color) !important;
 }
 .btn-L-primary{
     background-color: var(--primary-color);
@@ -259,4 +260,23 @@ input:focus-visible, textarea:focus-visible{
     height: 15%;
     bottom: 1em;
 }
-
+.nav-menu a:hover::after {
+     content: " ";
+     position: relative;
+     background-color: var(--primary-color);
+     display: flex;
+     height: 3px;
+     bottom: -8px;
+     width: auto;
+     overflow: hidden;
+     animation: leftToRightNav .3s forwards linear;
+ }
+/*animations*/
+@keyframes leftToRightNav {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
