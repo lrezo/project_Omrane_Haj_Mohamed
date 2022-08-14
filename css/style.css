@@ -270,10 +270,3 @@ input:focus-visible, textarea:focus-visible{
         opacity: 1;
     }
 }
-.jumbotron-description-middle{
-    animation: test .6s  ease;
-    animation-delay: .3s;
-    transition: .6s test ;
-    position: relative;
-    will-change: scroll-position;
-}
