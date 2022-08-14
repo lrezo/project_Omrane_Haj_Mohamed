@@ -82,7 +82,7 @@ form{
     gap: .5em;
     width: 100%;
 }
-.message,.name, .email,.subject span{
+.message,.name, .email,.subject span,.subject .text-center{
     color: var(--primary-color);
     font-family: 'Open Sans', sans-serif !important;
 }
